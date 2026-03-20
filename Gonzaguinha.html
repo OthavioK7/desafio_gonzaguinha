@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Completo Bootstrap - Mundo Gonzaga</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        /* Ajuste para as imagens do carrossel ficarem do mesmo tamanho */
+        .carousel-item img {
+            height: 350px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mundo Gonzaga</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Músicas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Trajetória</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="alert alert-info alert-dismissible fade show">
+            Bem-vindo ao nosso site! Conheça mais sobre o mundo da arte de Gonzaguinha.
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">O Que É o Que É?</h5>
+                        <p class="card-text">"Eu fico com a pureza da resposta das crianças: É a vida, é bonita e é bonita!" No gogó!</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 mb-4">
+                        <div class="card h-100">
+                            <div id="carouselGonzaguinha" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="gonzaguinha.jpg" class="d-block w-100" alt="Gonzaguinha 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images.vermelho.webp" class="d-block w-100" alt="Gonzaguinha 2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="download.colorida.jpg" class="d-block w-100" alt="Gonzaguinha 3">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselGonzaguinha" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselGonzaguinha" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Gonzaguinha</h5>
+                                <p class="card-text small">Um dos maiores compositores da MPB, mestre em traduzir o sentimento do povo brasileiro.</p>
+                                <ul class="list-unstyled mb-3 small">
+                                    <li><i class="bi bi-disc me-1"></i><strong>Álbum:</strong> De Volta ao Começo</li>
+                                    <li><i class="bi bi-tag me-1"></i><strong>Gênero:</strong> MPB</li>
+                                </ul>
+                                <a href="#" class="btn btn-success btn-sm w-100">Ouvir no Spotify</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 mb-4">
+                        <div class="card h-100">
+                            <img src="images.jpg" class="card-img-top" alt="Música" style="height: 350px; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Música: O Que É, O Que É?</h5>
+                                <p class="card-text small">Uma obra filosófica e motivacional que incentiva a valorizar a vida e a felicidade.</p>
+                                <button class="btn btn-primary w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#contatoModal">
+                                    Ver Letra Completa
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Newsletter</h5>
+                        <form>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Inscrever</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Links Rápidos</h5>
+                        <div class="list-group list-group-flush">
+                            <a href="#" class="list-group-item list-group-item-action">Sobre o Artista</a>
+                            <a href="#" class="list-group-item list-group-item-action">Discografia</a>
+                            <a href="#" class="list-group-item list-group-item-action">FAQ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="contatoModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Letra: O Que É, O Que É?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">
+                        Eu fico com a pureza<br>da resposta das crianças<br>
+                        É a vida, é bonita e é bonita<br>No gogó!<br><br>
+                        Viver e não ter a vergonha de ser feliz<br>
+                        Cantar e cantar e cantar<br>
+                        A beleza de ser um eterno aprendiz...
+                    </p>
+                    <p class="text-muted small text-center">(Letra resumida no modal para exemplo)</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white mt-5 py-3">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 Mundo Gonzaga. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
